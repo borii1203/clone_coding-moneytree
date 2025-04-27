@@ -10,22 +10,28 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <script src="lib/jquery-3.7.1.min.js"></script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        $(function () {
+        window.onload = () => {
             AOS.init({
                 duration: 800
             });
 
-            $('.section-03 .item_wrap .item a').on('click', function(){
-                var $item = $(this).closest('.item');
-                $item.find('.item_active').toggleClass('active');
-                $(this).toggleClass('rotate');
-                event.preventDefault();
-            });//click end
+            let btns = document.querySelectorAll('.section-03 .item .btn');
+            let itemActive = document.querySelectorAll('.section-03 .item_active');
+            let i = 0;
+            btns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    i++;
+                    itemActive.innerHTML = i;
+
+                    itemActive[i].classList.toggle('active');
+                    btn.classList.toggle('rotate');
+                    event.preventDefault();
+                })
+            });//click()
 
             var swiper = new Swiper(".swiperMain", {
                 effect: "fade",
@@ -71,8 +77,9 @@
                 speed: 5000,
                 loop: true,
             });//review_slide
-        });//script end
 
+
+        };//script end
     </script>
 </head>
 
@@ -329,10 +336,8 @@
                     </div><!-- .item_normal end -->
 
                     <div class="item_active">
-                        <div>
-                            <span>선불전자지급수단<br>
-                                발행 및 관리업</span>
-                        </div>
+                        <span>선불전자지급수단<br>
+                            발행 및 관리업</span>
                     </div><!-- .item_active end -->
                 </div><!-- .item end -->
 
@@ -350,11 +355,9 @@
                     </div><!-- .item_normal end -->
 
                     <div class="item_active">
-                        <div>
-                            <span>특정금전신탁계약 체결<br>
-                                위탁자 : 갤럭시아머니트리(주)<br>
-                                수탁자 : 주식회사 신한은행</span>
-                        </div>
+                        <span>특정금전신탁계약 체결<br>
+                            위탁자 : 갤럭시아머니트리(주)<br>
+                            수탁자 : 주식회사 신한은행</span>
                     </div><!-- .item_active end -->
                 </div><!-- .item end -->
 
@@ -371,10 +374,9 @@
                     </div><!-- .item_normal end -->
 
                     <div class="item_active">
-                        <div>
-                            <span>ISMS 인증</span>
-                            <span class="small">ISMS란? 한국인터넷진흥원(KISA)이 주관하는 국내 최고 수준의 정보보호 관리체계 인증 중 하나입니다</span>
-                        </div>
+                        <span>ISMS 인증</span>
+
+                        <span class="small">ISMS란? 한국인터넷진흥원(KISA)이 주관하는 국내 최고 수준의 정보보호 관리체계 인증 중 하나입니다</span>
                     </div><!-- .item_active end -->
                 </div><!-- .item end -->
             </div><!-- .item_wrap end -->
