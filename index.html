@@ -20,7 +20,7 @@
                 duration: 800
             });
 
-            $('.section-03 .item_wrap .item a').on('click', function(){
+            $('.section-03 .item_wrap .item a').on('click', function () {
                 var $item = $(this).closest('.item');
                 $item.find('.item_active').toggleClass('active');
                 $(this).toggleClass('rotate');
@@ -71,8 +71,12 @@
                 speed: 5000,
                 loop: true,
             });//review_slide
-        });//script end
 
+            $('.site').on('click', function(){
+                $('.list').toggleClass('active');
+                $('.arrow').toggleClass('flip');
+            });//관련사이트 버튼
+        });//script end
     </script>
 </head>
 
@@ -487,7 +491,7 @@
                 </div><!-- .title end -->
 
                 <div class="image">
-                    <img src="img/section05_img.png" alt="7,000개의 리뷰 머니트리 추천해요.">
+                    <img src="img/section05.png" alt="7,000개의 리뷰 머니트리 추천해요.">
                 </div><!-- .image end -->
             </div><!-- .text_wrap end -->
 
@@ -551,6 +555,105 @@
             </div><!-- .text_wrap end -->
         </div><!-- .inner end -->
     </section><!-- .section-06 end -->
+
+    <footer class="footer">
+        <div class="inner">
+            <div class="left_info">
+                <div>
+                    <span class="bold">고객센터</span>
+                    <span class="gray">평일 09:00 ~ 18:00(점심시간 12:00~13:00 미운영)</span>
+                </div>
+
+                <div>
+                    <div class="T_info">
+                        <span class="name">대표전화</span>
+                        <span class="bold">1544-5553</span>
+                    </div><!-- .T_info end -->
+
+                    <ul class="sub_info">
+                        <li>
+                            <span class="thin">휴대폰 분실신고(앱 및 카드 이용 정지)</span>
+                            <span class="bold_02">4 > 1번</span>
+                        </li>
+
+                        <li>
+                            <span class="thin">카드 분실신고(앱 이용 가능, 카드 이용 정지)</span>
+                            <span class="bold_02">4 > 2번</span>
+                        </li>
+                    </ul><!-- .sub_info end -->
+                </div>
+
+                <div>
+                    <div class="T_info">
+                        <span class="name">카드전용</span>
+                        <span class="bold">1588-8584</span>
+                    </div><!-- .T_info end -->
+
+                    <ul class="sub_info">
+                        <li>
+                            <span class="thin">카드 분실신고(앱 이용 가능, 카드 이용 정지)</span>
+                            <span class="bold_02">2 > 1번</span>
+                        </li>
+
+                        <p class="thin">분실해제는 고객센터를 통해서만 가능합니다</p>
+                    </ul><!-- .sub_info end -->
+                </div>
+
+                <div>
+                    <sapn class="copy gray thin">
+                        Copyright ⓒ GalaxiaMoneytree Co., Ltd. All Rights Reserved.
+                    </sapn>
+                </div>
+            </div><!-- .left_info end -->
+
+            <div class="right_info">
+                <ul class="legal">
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">전자금융거래 기본약관</a></li>
+                    <li><a href="#" class="blue">개인정보처리방침</a></li>
+                    <li><a href="#" class="blue">위치기반 서비스 이용약관</a></li>
+                </ul><!-- .legal end -->
+
+                <ul class="legal">
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">제휴/광고 문의</a></li>
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">자주 묻는 질문</a></li>
+                </ul><!-- .legal end -->
+
+                <div class="cop_info">
+                    <div>
+                        <span class="gray">사업자 등록번호: 120-81-60844</span>
+                        <span class="gray">대표이사: 신동훈</span>
+                    </div>
+
+                    <span class="gray">통신판매업신고번호: 제2009-서울강남-02516호</span>
+                    <span class="gray">(06349) 서울특별시 강남구 광평로 281 수서빌딩 15층</span>
+                </div><!-- .cop_info end -->
+
+                <div class="relate_site">
+                    <button type="button" class="site">
+                        <p>관련 사이트</p>
+                        <img class="arrow" src="img/icon_arrow_down.png" alt="">
+                    </button><!-- .site end -->
+
+                    <ul class="list">
+                        <li><a href="#">빌게이트</a></li>
+                        <li><a href="#">캐시게이트</a></li>
+                        <li><a href="#">갤럭시아콘</a></li>
+                        <li><a href="#">메타갤럭시아</a></li>
+                    </ul>
+                </div><!-- .relate_site end -->
+
+                <ul class="sns_wrap">
+                    <li><a href="#"><span class="icon_01"></span></a></li>
+                    <li><a href="#"><span class="icon_02"></span></a></li>
+                    <li><a href="#"><span class="icon_03"></span></a></li>
+                    <li><a href="#"><span class="icon_04"></span></a></li>
+                </ul><!-- .sns_wrap end -->
+            </div><!-- .right_info end -->
+        </div><!-- .inner end -->
+    </footer><!-- .footer end -->
 </body>
 
 </html>
